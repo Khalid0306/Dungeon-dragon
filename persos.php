@@ -44,7 +44,7 @@
                     <td>
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" 
                            >Détail</a>
-                        <a href="persos_del.php?id=<?php echo $perso['id'];?>" 
+                        <a  href="persos_del.php?id=<?php echo $perso['id'];?> "
                            onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
                            <a href="modif_persos.php? id=<?php echo $perso['id'];?>" 
                            >Modifier</a>
