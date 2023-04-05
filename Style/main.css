@@ -1,0 +1,18 @@
+.btn {
+    background: blue;
+    border: none;
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover{
+    background-color: bisque;
+}

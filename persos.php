@@ -19,17 +19,9 @@
     //dd($persos);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php require_once('nav.php'); ?>
-    <h1><?php echo $_SESSION['user']['email']; ?> Vos personnages</h1>
+<?php require_once('_header.php'); ?>
+    <h1><?php echo $_SESSION['user']['email']; ?></h1>
+    <h2><a>Vos personnages :</a></h2>
     <a href="perso_add.php">Creer votre personnage</a>
 
     <?php if (isset($_GET['msg'])) {
@@ -50,8 +42,12 @@
                     <td><?php echo $perso['id']; ?></td>
                     <td><?php echo $perso['name']; ?></td>
                     <td>
-                        <a href="persos_del.php?id=<?php echo $perso['id'];?> 
+                    <a href="persos_show.php?id=<?php echo $perso['id']; ?>" 
+                           >Détail</a>
+                        <a href="persos_del.php?id=<?php echo $perso['id'];?>" 
                            onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
+                           <a href="modif_persos.php? id=<?php echo $perso['id'];?>" 
+                           >Modifier</a>
                     </td>
                 </tr>
             <?php } ?>
