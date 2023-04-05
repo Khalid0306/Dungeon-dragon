@@ -5,7 +5,6 @@
     if (!isset($_GET['ID'])) {
         header('Location: persos.php?msg=id non passé !');
     }
-    $bdd= connect();
 
     $sql = "DELETE FROM persos WHERE id = :id AND user_id=:user_id;";
 
