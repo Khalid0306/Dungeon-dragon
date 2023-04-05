@@ -31,6 +31,32 @@
     <?php require_once('nav.php'); ?>
     <h1><?php echo $_SESSION['user']['email']; ?> Vos personnages</h1>
     <a href="perso_add.php">Creer votre personnage</a>
+
+    <?php if (isset($_GET['msg'])) {
+        echo "<div>" . $_GET['msg']. "</div>";
+    } ?>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nom</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($persos as $perso) { ?>
+                <tr>
+                    <td><?php echo $perso['id']; ?></td>
+                    <td><?php echo $perso['name']; ?></td>
+                    <td>
+                        <a href="persos_del.php?id=<?php echo $perso['id'];?> 
+                           onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>
 
