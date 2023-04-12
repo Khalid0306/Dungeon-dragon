@@ -25,7 +25,7 @@
  <h1>Détail du personnage</h1>
  <b>Nom : </b><?php echo $perso['name'];?>
  <div>
-    <a href="persos.php" class="btn">Retour</a>
+    <a href="persos.php" class="btn btn-red">Retour</a>
  </div>
  
 

@@ -22,8 +22,7 @@
 <?php require_once('_header.php'); ?>
     <h1><?php echo $_SESSION['user']['email']; ?></h1>
     <h2><a>Vos personnages :</a></h2>
-    <a href="perso_add.php">Creer votre personnage</a>
-
+    
     <?php if (isset($_GET['msg'])) {
         echo "<div>" . $_GET['msg']. "</div>";
     } ?>
@@ -42,17 +41,18 @@
                     <td><?php echo $perso['id']; ?></td>
                     <td><?php echo $perso['name']; ?></td>
                     <td>
-                    <a href="persos_show.php?id=<?php echo $perso['id']; ?>" 
+                    <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
                            >Détail</a>
-                        <a  href="persos_del.php?id=<?php echo $perso['id'];?> "
+                        <a  href="persos_del.php?id=<?php echo $perso['id'];?> " class="btn btn-green"
                            onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
-                           <a href="modif_persos.php?id=<?php echo $perso['id'];?>" 
+                           <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"
                            >Modifier</a>
                     </td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
+    <a href="perso_add.php" class="btn btn-blue"> Creer votre personnage</a>
 </body>
 </html>
 

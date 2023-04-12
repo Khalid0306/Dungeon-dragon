@@ -48,7 +48,7 @@
             />
         </div>
         <div>
-            <input type="submit" name="send" value="Se connecter" />
+            <input type="submit" class="btn btn-green" name="send" value="Se connecter" />
         </div>
     </form>
 </body>

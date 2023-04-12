@@ -36,8 +36,8 @@
                 id="password" 
             />
         </div>
-        <div>
-            <input type="submit" name="send" value="Créer" />
+        <div class="mt-4">
+            <input type="submit" name="send" value="Créer" class="btn btn-green" />
         </div>
     </form>
 </body>

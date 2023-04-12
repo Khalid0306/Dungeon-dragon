@@ -54,7 +54,7 @@
         <input type="aff" placeholder="Entrez votre affinité" name="aff" id="aff" />
     </div>
     <div>
-        <input type="submit" name="send" value="Créer" />
+        <input type="submit" class="btn btn-green" name="send" value="Créer" />
     </div>
     </form>
     
