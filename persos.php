@@ -14,20 +14,21 @@
         'user_id'        =>$_SESSION['user']['id']
     ]);
 
-    $persos = $sth ->fetchAll()
+    $persos = $sth ->fetchAll();
 
     //dd($persos);
 ?>
 
 <?php require_once('_header.php'); ?>
     <h1><?php echo $_SESSION['user']['email']; ?></h1>
+    <div class="container">
     <h2><a>Vos personnages :</a></h2>
     
     <?php if (isset($_GET['msg'])) {
         echo "<div>" . $_GET['msg']. "</div>";
     } ?>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <td>ID</td>
@@ -41,9 +42,11 @@
                     <td><?php echo $perso['id']; ?></td>
                     <td><?php echo $perso['name']; ?></td>
                     <td>
+                    <a href="persos_choice.php?id=<?php echo $perso['id']; ?>" class="btn btn-green"
+                           >Choisir</a>
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
                            >Détail</a>
-                        <a  href="persos_del.php?id=<?php echo $perso['id'];?> " class="btn btn-green"
+                        <a  href="persos_del.php?id=<?php echo $perso['id'];?> " class="btn btn-red"
                            onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
                            <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"
                            >Modifier</a>
@@ -52,7 +55,10 @@
             <?php } ?>
         </tbody>
     </table>
+    <div class="mt-4">
     <a href="perso_add.php" class="btn btn-blue"> Creer votre personnage</a>
+    </div>
+    </div>
 </body>
 </html>
 

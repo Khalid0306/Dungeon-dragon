@@ -22,11 +22,14 @@
     $perso = $sth->fetch();
 ?>
 <?php require_once('_header.php'); ?>
- <h1>Détail du personnage</h1>
- <b>Nom : </b><?php echo $perso['name'];?>
+<div class="container">
+<h1>Détail du personnage</h1>
+ <b required >Nom : </b><?php echo $perso['name'];?> 
  <div>
     <a href="persos.php" class="btn btn-red">Retour</a>
  </div>
+</div>
+ 
  
 
 

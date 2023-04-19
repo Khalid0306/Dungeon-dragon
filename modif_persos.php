@@ -32,6 +32,7 @@
     }
 ?>
 <?php require_once('_header.php'); ?>
+<div class="container">
 <h1>Modifications : </h1>
 <form action="" method="POST">
     <div>
@@ -40,9 +41,11 @@
         <input type="name" placeholder="Entrez le nom de votre personnage" name="name" id="name" />
     </div>
     <div>
-        <input type="submit" class="btn btn-red" name="send" value="modifier" />
+        <input type="submit" class="btn btn-grey" name="send" value="modifier" />
     </div>
     </form>
 <div>
-    <a href="persos.php" class="btn btn-grey">Retour</a>
+    <a href="persos.php" class="btn btn-red">Retour</a>
  </div>
+</div>
+

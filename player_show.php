@@ -17,7 +17,8 @@
     $player = $sth->fetch();
 ?>
 <?php require_once('_header.php'); ?>
- <h1>Information du compte : </h1>
+<div class="container">
+<h1>Information du compte : </h1>
  <b>Email : </b><?php echo $player['email'];?>
  <div>
  <label for="password"> <b>Mot de passe : </b> </label>
@@ -33,3 +34,5 @@
  <div class="mt-4">
     <a href="persos.php" class="btn btn-red">Retour</a>
  </div>
+</div>
+ 

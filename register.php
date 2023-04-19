@@ -16,7 +16,8 @@
     }
 ?>
 <?php require_once('_header.php'); ?>
-    <form action="" method="post">
+<div class="container">
+<form action="" method="post">
         <h1>Création de votre compte</h1>
         <div>
             <label for="email">Email</label>
@@ -40,6 +41,7 @@
             <input type="submit" name="send" value="Créer" class="btn btn-green" />
         </div>
     </form>
+</div>
 </body>
 </html>
 

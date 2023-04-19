@@ -35,6 +35,7 @@
 
 ?>
 <?php require_once('_header.php'); ?>
+<div class="container">
 <h1>Modifications  : </h1>
 <script>
     function checkOldPassword() {
@@ -71,3 +72,5 @@
 <div>
     <a href="player_show.php" class="btn btn-red">Retour</a>
  </div>
+
+</div>
