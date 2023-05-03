@@ -12,6 +12,7 @@ class Dark_knight extends Ennemi
            $this->constitution = 15 ;
            $this->Vitesse = 5 ;
            $this->xp = 20 ;
+           $this->gold = 12 ;
     }
 
     public function runaway()

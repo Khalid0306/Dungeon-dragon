@@ -46,10 +46,10 @@
                            >Choisir</a>
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
                            >Détail</a>
+                        <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"
+                           >Modifier</a>
                         <a  href="persos_del.php?id=<?php echo $perso['id'];?> " class="btn btn-red"
                            onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
-                           <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"
-                           >Modifier</a>
                     </td>
                 </tr>
             <?php } ?>

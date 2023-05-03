@@ -5,6 +5,8 @@ class Room {
     private string $description;
     private string $type;
     private int $donjon_id;
+    private int $or;
+
 
     public function __construct($room)
     {
@@ -33,9 +35,8 @@ class Room {
     {
         $this->description = $description;
     }
+    public function getHTML(): string{
 
-    public function getAction(): string
-    {
         $html = "";
 
         switch ($this->type) {
@@ -62,6 +63,27 @@ class Room {
         }
 
         return $html;
+
+    }
+
+    public function getAction(): void
+    {
+
+        switch ($this->type) {
+            case 'vide':
+                break;
+
+            case 'treasure':
+                $this -> or = rand(0, 20);
+                $_SESSION['perso']['gold'] += $this -> or;
+                break;
+            
+            case 'combat':
+                break;
+            
+            default:
+                break;
+        }
     }
 
 }

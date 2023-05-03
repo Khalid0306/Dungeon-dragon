@@ -11,7 +11,8 @@ class Ennemi
     public int $xp;
     public int $gold;
 
-    public function runaway()
+    //Fonction qui gére l'attaque.
+    public function atk()
     {
         
     }

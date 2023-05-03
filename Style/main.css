@@ -7,10 +7,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+.row {
+    display: flex;
+}
 
 .container {
     width: 80%;
     margin: auto;
+}
+
+
+.col {
+    width: 50%;
 }
 
 .table {
@@ -74,4 +82,12 @@ h1 {
 
 .mt-4 {
     margin-top: 2rem;
+}
+
+.me-2 {
+    margin-right: 1.1rem;
+}
+
+.px-4 {
+    padding: 0 2rem;
 }

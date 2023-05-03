@@ -10,6 +10,10 @@
         header('Location: persos.php');
     }
 
+    if (isset($_SESSION['fight'])) {
+        unset($_SESSION['fight']);
+    }
+
     $bdd = connect();
 
     $sql= "SELECT * FROM `rooms` WHERE donjon_id = :donjon_id ORDER BY RAND() LIMIT 1;";
@@ -24,6 +28,8 @@
 
     require_once('./Classes/Room.php');
     $roomObject = new Room($room);
+    $roomObject -> getAction();
+
 
     // $roomObject->name = "toto";
 ?>
@@ -37,7 +43,7 @@
             <div class="">
                 <h1><?php echo $roomObject->getName(); ?></h1>
                 <p><?php echo $roomObject->getDescription(); ?></p>
-                <?php echo $roomObject->getAction(); ?>
+                <?php echo $roomObject->getHTML(); ?>
             </div>
         </div>
     </div>
