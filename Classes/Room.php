@@ -6,6 +6,7 @@ class Room {
     private string $type;
     private int $donjon_id;
     private int $or;
+    public string $picture;
 
 
     public function __construct($room)
@@ -14,6 +15,7 @@ class Room {
         $this->description = $room['description'];
         $this->type = $room['type'];
         $this->donjon_id = $room['donjon_id'];
+        $this->picture= $room['picture']? $room['picture'] : "";
     }
 
     public function getName(): string
@@ -85,5 +87,6 @@ class Room {
                 break;
         }
     }
+
 
 }
