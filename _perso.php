@@ -8,6 +8,7 @@
 <div class="mt-4">
     <b>Force:</b> <?php echo $_SESSION['perso']['pwr']; ?></h2>
 </div>
+
 <div>
     <b>Dextérité:</b> <?php echo $_SESSION['perso']['dex']; ?></h2>
 </div>

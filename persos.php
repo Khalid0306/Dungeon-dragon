@@ -31,9 +31,18 @@
     <table class="table">
         <thead>
             <tr>
-                <td>ID</td>
-                <td>Nom</td>
-                <td>Action</td>
+            <th width="1%">ID</th>
+                <th>Nom</th>
+                <th>Xp</th>
+                <th>PV</th>
+                <th>Force</th>
+                <th>Dextérité</th>
+                <th>Defence</th>
+                <th>Mana</th>
+                <th>Affinité</th>
+                <th>Vitesse</th>
+                <th>Or</th>
+                <th width="30%">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -41,9 +50,28 @@
                 <tr>
                     <td><?php echo $perso['id']; ?></td>
                     <td><?php echo $perso['name']; ?></td>
-                    <td>
-                    <a href="persos_choice.php?id=<?php echo $perso['id']; ?>" class="btn btn-green"
-                           >Choisir</a>
+                    <td><?php echo $perso['xp']; ?></td>
+                    <td><?php echo $perso['pv']; ?></td>
+                    <td><?php echo $perso['pwr']; ?></td>
+                    <td><?php echo $perso['dex']; ?></td>
+                    <td><?php echo $perso['def']; ?></td>
+                    <td><?php echo $perso['mana']; ?></td>
+                    <td><?php echo $perso['aff']; ?></td>
+                    <td><?php echo $perso['vit']; ?></td>
+                    <td><?php echo $perso['gold']; ?></td>
+                    <td align="right">
+                        <?php if ($perso['pv'] > 0) { ?>
+                            <a 
+                                class="btn btn-green"
+                                href="persos_choice.php?id=<?php echo $perso['id']; ?>" 
+                            >Choisir</a>
+                        <?php } else { ?>
+                            <a 
+                                class="btn btn-green"
+                                href="persos_respawn.php?id=<?php echo $perso['id']; ?>" 
+                            >Résussité</a>
+                        <?php } ?>
+
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
                            >Détail</a>
                         <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"

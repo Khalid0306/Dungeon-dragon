@@ -30,28 +30,34 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
+<?php require_once('_header.php'); ?>
 <body>
     <h1>
         <center><b>Creez votre personnage</b></center>
     </h1>
     <form action="" method="POST">
     <div>
-        <label for="name">name :</label>
+        <label for="name">Name :</label>
         <input type="name" placeholder="Entrez le nom de votre personnage" name="name" id="name" />
     </div>
+
     <div>
-        <label for="aff">affinite :</label>
-        <input type="aff" placeholder="Entrez votre affinité" name="aff" id="aff" />
+        <label for="aff">Affinite :</label>
+        <select id="aff">
+        <option value="">--Please choose an option--</option>
+        <option value="Fire">Fire</option>
+        <option value="Water">Water</option>
+        <option value="Earth">Earth</option>
+        <option value="Air">Air</option>
+    </select>
+    </div>
+    <div>
+    <label for="gender">Gender:</label>
+        <select id="gender">
+        <option value="">--Please choose an option--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
     </div>
     <div>
         <input type="submit" class="btn btn-green" name="send" value="Créer" />

@@ -21,8 +21,19 @@
     $donjons = $sth->fetchAll();
 ?>
 
+    <style>
+    body {
+        background-image: url(img/chateau-fantasmagorique-noir-dragon-volant-dans-canyon-montagnes-foret-illustration-dessin-anime-fantastique-palais-medieval-tours-bete-effrayante-ailes-rochers-pins_107791-4592.avif);
+        background-size: cover;
+    }
+    </style>
+
 <?php require_once('_header.php'); ?>
     <div class="container">
+    <div 
+        class="container"
+        style="background-color: rgba(255,255,255, 0.2)"
+    >
         <?php echo $_SESSION['perso']['name']; ?> (<a href="persos.php">Changer</a>)
         <ul>
             <?php foreach($donjons as $donjon) { ?>

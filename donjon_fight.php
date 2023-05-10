@@ -17,7 +17,7 @@
     if (!isset($_SESSION['fight']))  {
        $nb = random_int(0,10); 
 
-       if ($nb <= 8) {
+       if ($nb <= 6) {
         $ennemi = new Gobelin ();
        } else {
         $ennemi = new Dark_knight();
@@ -143,39 +143,64 @@
     }
 
     require_once('_header.php');
-?>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="px-4">
-                <?php require_once('_perso.php'); ?>
-            </div>
-            <div class="">
-                <h1>Combat</h1>
-                <?php
+    ?>
 
-                    foreach($_SESSION['fight']['html'] as $html) {
-                        echo '<p>'.$html.'</p>';
-                    }
+    <style>
+    body {
+        background-image: url(img/environnement-arriere-plan-du-portail-magique-2d-pour-jeu-mobile-arene-combat-generative-ai_742252-13929.jpg);
+        background-size: cover;
+    }
+    </style>
 
-                ?>
-
-<?php if ($_SESSION['fight']['ennemi']->pv > 0) { ?>
-        <a class="btn btn-green" href="donjon_fight.php?id=<?php echo $_GET['id']; ?>">
-            Attaquer
-        </a>
-        <a class="btn btn-blue" href="donjons_play.php?id=<?php echo $_GET['id']; ?>">
-            Fuir
-        </a>
-<?php } else { ?>
-        <a class="btn btn-green" href="donjons_play.php?id=<?php echo $_GET['id']; ?>">
-            Continuer l'exploration
-        </a>
-<?php } ?>     
-</div>
-            <div class="px-4">
-                <?php require_once('_ennemi.php'); ?>
+    <?php require_once('_header.php'); ?>
+    <div 
+        class="container"
+        style="background-color: rgba(255,255,255, 0.2)"
+    >
+        <div class="container">
+            <div class="row mt-4">
+                
+                    <div class="px-4">
+                        <?php require_once('_perso.php'); ?>
+                    </div>
+                    <div class="w-60">
+                        <h1>Combat</h1>
+                        <?php
+    
+                            foreach($_SESSION['fight']['html'] as $html) {
+                                echo '<div>'.$html.'</div>';
+                            }
+    
+                        ?>
+                        <?php if ($_SESSION['perso']['pv'] > 0) { ?>
+                            <?php if ($_SESSION['fight']['ennemi']->pv > 0) { ?>
+                                <a class="btn btn-green" href="donjon_fight.php?id=<?php echo $_GET['id']; ?>">
+                                    Attaquer
+                                </a>
+                                <a class="btn btn-blue" href="donjons_play.php?id=<?php echo $_GET['id']; ?>">
+                                    Fuir
+                                </a>
+                            <?php } else { ?>
+                                <a class="btn btn-green" href="donjons_play.php?id=<?php echo $_GET['id']; ?>">
+                                    Continuer l'exploration
+                                </a>
+                            <?php } ?>
+                        <?php } else { ?>
+    
+                            <div class="alert">Vous êtes mort au combat</div>
+                            <a class="btn btn-green" href="persos.php?msg=Votre personnage est mort">Choisir un nouveau personnage</a>
+                        <?php } ?>
+                    </div>
+                <div class="px-4">
+                    <?php require_once('_ennemi.php'); ?>
+                </div>
             </div>
         </div>
-    </div>
-    </body>
-</html>
+            <?php
+            if ($_SESSION['perso']['pv'] <= 0) {
+                unset($_SESSION['perso']);
+                unset($_SESSION['fight']);
+            }
+        ?>
+        </body>
+    </html>
