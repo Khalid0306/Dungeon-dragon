@@ -6,7 +6,7 @@
     }
     $bdd= connect();
 
-    $sql= "SELECT * FROM persos WHERE user_id = :user_id ";
+    $sql = " SELECT persos.*, classes.nom_classe AS class_name, races.nom_race AS race_name FROM persos LEFT JOIN classes ON persos.id_classes = classes.id_classes LEFT JOIN races ON persos.id_race = races.id_race WHERE persos.user_id = :user_id";
 
     $sth= $bdd->prepare($sql);
     
@@ -33,6 +33,8 @@
             <tr>
             <th width="1%">ID</th>
                 <th>Nom</th>
+                <th>Class</th>
+                <th>Race</th>
                 <th>Xp</th>
                 <th>PV</th>
                 <th>Force</th>
@@ -48,17 +50,19 @@
         <tbody>
             <?php foreach ($persos as $perso) { ?>
                 <tr>
-                    <td><?php echo $perso['id']; ?></td>
-                    <td><?php echo $perso['name']; ?></td>
-                    <td><?php echo $perso['xp']; ?></td>
-                    <td><?php echo $perso['pv']; ?></td>
-                    <td><?php echo $perso['pwr']; ?></td>
-                    <td><?php echo $perso['dex']; ?></td>
-                    <td><?php echo $perso['def']; ?></td>
-                    <td><?php echo $perso['mana']; ?></td>
-                    <td><?php echo $perso['aff']; ?></td>
-                    <td><?php echo $perso['vit']; ?></td>
-                    <td><?php echo $perso['gold']; ?></td>
+                    <td class="center-text"><?php echo $perso['id']; ?></td>
+                    <td class="center-text"><?php echo $perso['name']; ?></td>
+                    <td class="center-text"><?php echo $perso['class_name']; ?></td>
+                    <td class="center-text"><?php echo $perso['race_name']; ?></td>
+                    <td class="center-text"><?php echo $perso['xp']; ?></td>
+                    <td class="center-text"><?php echo $perso['pv']; ?></td>
+                    <td class="center-text"><?php echo $perso['pwr']; ?></td>
+                    <td class="center-text"><?php echo $perso['dex']; ?></td>
+                    <td class="center-text"><?php echo $perso['def']; ?></td>
+                    <td class="center-text"><?php echo $perso['mana']; ?></td>
+                    <td class="center-text"><?php echo $perso['aff']; ?></td>
+                    <td class="center-text"><?php echo $perso['vit']; ?></td>
+                    <td class="center-text"><?php echo $perso['gold']; ?></td>
                     <td align="right">
                         <?php if ($perso['pv'] > 0) { ?>
                             <a 
