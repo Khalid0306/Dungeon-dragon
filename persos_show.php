@@ -9,8 +9,26 @@
     }
 
     $bdd = connect();
+    
 
-    $sql="SELECT * FROM persos WHERE id = :id AND user_id=:user_id;";
+    // Récupérer les classes
+    $sql = "SELECT * FROM classes";
+    $sth = $bdd->prepare($sql);
+    $sth->execute();
+    $classes = $sth->fetchAll();
+
+    // Récupérer les races
+    $sql = "SELECT * FROM races";
+    $sth = $bdd->prepare($sql);
+    $sth->execute();
+    $races = $sth->fetchAll();
+
+
+    $sql=$sql = "SELECT persos.*, classes.nom_classe AS class_name, races.nom_race AS race_name 
+    FROM persos 
+    INNER JOIN classes ON persos.id_classes = classes.id_classes 
+    INNER JOIN races ON persos.id_race = races.id_race 
+    WHERE persos.id = :id AND persos.user_id = :user_id LIMIT 0, 25";
 
     $sth = $bdd->prepare($sql);
 
@@ -59,6 +77,14 @@
 
     <div class="mt-2">
         <b>Point de vie:</b> <?php echo $perso['pv']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Class :</b> <?php echo $perso['class_name']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Race :</b> <?php echo $perso['race_name']; ?>
     </div>
 
  <div>
