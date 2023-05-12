@@ -147,7 +147,7 @@
 
     <style>
     body {
-        background-image: url(img/environnement-arriere-plan-du-portail-magique-2d-pour-jeu-mobile-arene-combat-generative-ai_742252-13929.jpg);
+        background-image: url(img/ff55fcc4408217a3f14715085304d59b.jpg);
         background-size: cover;
     }
     </style>
