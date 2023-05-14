@@ -10,6 +10,7 @@ class Ennemi
     public int $Vitesse;
     public int $xp;
     public int $gold;
+    public string $picture;
 
     //Fonction qui gére l'attaque.
     public function atk()

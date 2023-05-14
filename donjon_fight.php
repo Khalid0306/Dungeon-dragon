@@ -26,7 +26,6 @@
        $_SESSION['fight']['ennemi'] = $ennemi;
        $_SESSION['fight']['html'] []= "Vous tombez sur un ". $ennemi->nom. '.';
     }
-
        
     if ($_SESSION['fight']['ennemi']->Vitesse > $_SESSION['perso']['vit']){
         $_SESSION['fight']['html'] []= $ennemi -> nom  .' tape en premier ';
@@ -117,7 +116,7 @@
                     $_SESSION['fight']['html'][] = "Vous etes mort.";
                 }
             } else {
-                $_SESSION['fight']['html'][] = "Il vous rate ennmi.";
+                $_SESSION['fight']['html'][] = "Votre ennemie vous rate.";
             }
         }
     }
@@ -193,6 +192,7 @@
                     </div>
                 <div class="px-4">
                     <?php require_once('_ennemi.php'); ?>
+                    <img class="ennemi-img" src="<?php echo $_SESSION['fight']['ennemi']->picture; ?>" alt="Image de l'ennemi">
                 </div>
             </div>
         </div>

@@ -13,7 +13,10 @@ class Gobelin extends Ennemi
            $this->Vitesse = 7 ;
            $this->xp = 4 ;
            $this->gold = 12 ;
+           $this->picture = 'img/goblin-removebg-preview.png'; 
+    
     }
+
 
     public function runaway()
     {

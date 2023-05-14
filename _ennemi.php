@@ -1,6 +1,6 @@
 <h2><?php echo $_SESSION['fight']['ennemi']-> nom; ?></h2>
 <div>
-    <b>Point de vie :</b><?php echo $_SESSION['fight']['ennemi']-> pv; ?>
+    <b>PV :</b><?php echo $_SESSION['fight']['ennemi']-> pv; ?>
 </div>
 <div>
     <b>Xp :</b><?php echo $_SESSION['fight']['ennemi']-> xp; ?>
