@@ -24,7 +24,7 @@
     $races = $sth->fetchAll();
 
 
-    $sql=$sql = "SELECT persos.*, classes.nom_classe AS class_name, races.nom_race AS race_name 
+    $sql = "SELECT persos.*, classes.nom_classe AS class_name, races.nom_race AS race_name 
     FROM persos 
     INNER JOIN classes ON persos.id_classes = classes.id_classes 
     INNER JOIN races ON persos.id_race = races.id_race 
@@ -41,11 +41,37 @@
 ?>
 <?php require_once('_header.php'); ?>
 <div class="container">
+<div class="">
+     <?php require_once('_perso_show_image.php'); ?>
+    </div>
 <h1>Détail du personnage</h1>
-    
 <div class="mt-2" >
      <b>Nom:</b> <?php echo $perso['name']; ?>
      </div>
+     
+     <div class="mt-2">
+        <b>Point de vie:</b> <?php echo $perso['pv']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Class :</b> <?php echo $perso['class_name']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Race :</b> <?php echo $perso['race_name']; ?>
+    </div>
+    
+    <div class="mt-2">
+        <b>Level :</b> <?php echo $perso['level']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Xp :</b> <?php echo $perso['xp']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Point de compétence :</b> <?php echo $perso['pts de competence']; ?>
+    </div>
 
 <div class="mt-2" >
      <b>Affinité:</b> <?php echo $perso['aff']; ?>
@@ -75,22 +101,11 @@
         <b>Vitesse:</b> <?php echo $perso['vit']; ?>
     </div>
 
-    <div class="mt-2">
-        <b>Point de vie:</b> <?php echo $perso['pv']; ?>
-    </div>
-
-    <div class="mt-2">
-        <b>Class :</b> <?php echo $perso['class_name']; ?>
-    </div>
-
-    <div class="mt-2">
-        <b>Race :</b> <?php echo $perso['race_name']; ?>
-    </div>
-
- <div>
+ <div class="mt-2">
     <a href="persos.php" class="btn btn-red">Retour</a>
  </div>
 </div>
+
  
  
 

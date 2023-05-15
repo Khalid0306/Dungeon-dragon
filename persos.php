@@ -1,4 +1,8 @@
 <?php require_once('functions.php'); ?>
+<?php require_once('_level_up.php');?>
+
+
+
 
 <?php 
     if (!isset($_SESSION['user'])) {
@@ -23,6 +27,21 @@
     <h1><?php echo $_SESSION['user']['email']; ?></h1>
     <div class="container">
     <h2><a>Vos personnages :</a></h2>
+
+    <?php
+    // Sauvegarde de l'état de votre personnage
+    $bdd = connect();
+    $sql = "UPDATE persos SET `level` = :level, `xp` = :xp WHERE id = :id AND user_id = :user_id;";    
+    $sth = $bdd->prepare($sql);
+
+    $sth->execute([
+        'level'      => $_SESSION['perso']['level'],
+        'xp'      => $_SESSION['perso']['xp'],
+        'id'        => $_SESSION['perso']['id'],
+        'user_id'   => $_SESSION['user']['id']
+    ]);
+
+    ?>
     
     <?php if (isset($_GET['msg'])) {
         echo "<div>" . $_GET['msg']. "</div>";
@@ -33,6 +52,7 @@
             <tr>
             <th width="1%">ID</th>
                 <th>Nom</th>
+                <th>Lvl</th>
                 <th>Class</th>
                 <th>Race</th>
                 <th>Xp</th>
@@ -52,6 +72,7 @@
                 <tr>
                     <td class="center-text"><?php echo $perso['id']; ?></td>
                     <td class="center-text"><?php echo $perso['name']; ?></td>
+                    <td class="center-text"><?php echo $perso['level']; ?></td>
                     <td class="center-text"><?php echo $perso['class_name']; ?></td>
                     <td class="center-text"><?php echo $perso['race_name']; ?></td>
                     <td class="center-text"><?php echo $perso['xp']; ?></td>
