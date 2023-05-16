@@ -116,8 +116,6 @@
             <b>Point de vie:</b> <?php echo $perso['pv']; ?>
             <div >
                 <form action="_increase_stats.php" method="POST">
-                    <!-- Code de débogage -->
-                    <?php if (isset($perso['id'])) { echo 'ID est défini: ' . $perso['id']; } else { echo 'ID n\'est pas défini.'; } ?>
                     <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
                     <input type="hidden" name="stat" value="pv">
                     <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
