@@ -6,6 +6,7 @@ class Room {
     private string $type;
     private int $donjon_id;
     private int $or;
+    private int $pv;
     public string $picture;
 
 
@@ -69,7 +70,8 @@ class Room {
                 $html .= "<p class='mt-4'><a href='donjon_fight.php?id=". $this->donjon_id ."' class='btn btn-green'>Combattre</a></p>";
                 $html .= "<p class='mt-4'><a href='donjons_play.php?id=". $this->donjon_id ."' class='btn btn-green'>Fuir et continuer et explorer</a></p>";
                 break;
-            
+
+
             default:
                 $html .= "<p>Aucune action possible !</p>";
                 break;
@@ -89,6 +91,13 @@ class Room {
             case 'treasure':
                 $this -> or = rand(0, 20);
                 $_SESSION['perso']['gold'] += $this -> or;
+                break;
+            
+            case 'camp':
+                $this ->pv = rand(2, 5);
+                if ($_SESSION['perso']['pv'] < 30 ) {
+                    $_SESSION['perso']['pv'] += $this -> pv;
+                }
                 break;
             
             case 'combat':

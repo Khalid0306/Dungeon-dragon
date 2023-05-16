@@ -1,5 +1,6 @@
 <?php require_once('functions.php');
 
+
     if (!isset($_SESSION['user'])) {
         header('Location: login.php');
     }
@@ -42,7 +43,7 @@
 <?php require_once('_header.php'); ?>
 <div class="container">
 <div class="">
-     <?php require_once('_perso_show_image.php'); ?>
+     <!-- <?php //require_once('_perso_show_image.php'); ?> -->
     </div>
 <h1>Détail du personnage</h1>
 <div class="mt-2" >
@@ -100,6 +101,86 @@
     <div class="mt-2">
         <b>Vitesse:</b> <?php echo $perso['vit']; ?>
     </div>
+
+    <div class="vl"></div>
+
+    <div class="vl_text">
+    
+    <h1>Attribuez vos points CP: </h1>
+
+        <div class="mt-4">
+            <b>Point de compétence :</b> <?php echo $perso['pts de competence']; ?>
+        </div>
+
+        <div class="mt-4">
+            <b>Point de vie:</b> <?php echo $perso['pv']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <!-- Code de débogage -->
+                    <?php if (isset($perso['id'])) { echo 'ID est défini: ' . $perso['id']; } else { echo 'ID n\'est pas défini.'; } ?>
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="pv">
+                    <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <b>Force:</b> <?php echo $perso['pwr']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="pwr">
+                    <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <b>Dextérité:</b> <?php echo $perso['dex']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="dex">
+                    <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <b>Defense :</b> <?php echo $perso['def']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="def">
+                    <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <b>Mana:</b> <?php echo $perso['mana']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="mana">
+                    <input type="submit" value="+" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <b>Vitesse:</b> <?php echo $perso['vit']; ?>
+            <div >
+                <form action="_increase_stats.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
+                    <input type="hidden" name="stat" value="vit">
+                    <input type="submit" value="+" class="btn btn-green"  onClick="return confirm('Confirmez vous votre choix ?')">
+                </form>
+            </div>
+        </div>
+    
+    </div> 
 
  <div class="mt-2">
     <a href="persos.php" class="btn btn-red">Retour</a>

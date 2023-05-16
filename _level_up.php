@@ -1,5 +1,23 @@
 <?php
 
+
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+    }
+    $bdd= connect();
+
+    $sql = " SELECT persos.*, classes.nom_classe AS class_name, races.nom_race AS race_name FROM persos LEFT JOIN classes ON persos.id_classes = classes.id_classes LEFT JOIN races ON persos.id_race = races.id_race WHERE persos.user_id = :user_id";
+
+    $sth= $bdd->prepare($sql);
+    
+    $sth->execute([
+        'user_id'        =>$_SESSION['user']['id']
+    ]);
+
+    $persos = $sth ->fetchAll();
+
+    //dd($persos);
+
 $isLevelUp = false;
 
     if ($_SESSION['perso']['xp'] >= 15 && $_SESSION['perso']['level'] == 0 ) {
@@ -72,8 +90,8 @@ $isLevelUp = false;
         $_SESSION['perso']['level'] += 1;
         $_SESSION['perso']['xp'] -= 180 ;
         
-    }     
-
+    }
+    
     if ($isLevelUp) {
         // Sauvegarde de l'état de votre personnage
         $bdd = connect();
