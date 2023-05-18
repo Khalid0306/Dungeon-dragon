@@ -25,12 +25,17 @@ if (!$perso) {
     exit();
 }
 
+
 if (isset($_POST['stat']) && $perso['pts de competence'] > 0) {
     $stat = $_POST['stat'];
 
     $perso[$stat]++;
     $perso['pts de competence']--;
 
+    // Réinitialiser à zéro si négatif
+    if ($perso['pts de compétence'] < 0) {
+        $perso['pts de compétence'] = 0; 
+    }
     $sql = "UPDATE persos SET `pv` = :pv, `pwr` = :pwr, `dex` = :dex, `def` = :def, `mana` = :mana, `vit` = :vit, `pts de competence` = :pts WHERE id = :id AND user_id = :user_id";
     $sth = $bdd->prepare($sql);
     $sth->execute([
@@ -47,6 +52,9 @@ if (isset($_POST['stat']) && $perso['pts de competence'] > 0) {
     
 
     header('Location: persos_show.php?id=' . $perso['id']);
+    exit();
+}else {
+    header('Location: persos_show.php?id=' . $perso['id'] . '&msg=Action non valide');
     exit();
 }
 ?>

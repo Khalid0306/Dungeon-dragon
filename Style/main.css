@@ -148,3 +148,10 @@ h1 {
     top: -17px;
     bottom: 90%;
   }
+
+  .button-bottom-center {
+    position: fixed;
+    left: 50%;
+    bottom: 250px;
+    transform: translate(-50%, -50%);
+}

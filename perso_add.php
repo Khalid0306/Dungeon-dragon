@@ -5,19 +5,19 @@ if (!isset($_SESSION['user'])) {
     header('Location: login.php');
 }
 
-$bdd = connect();
+    $bdd = connect();
 
-// Récupérer les classes
-$sql = "SELECT * FROM classes";
-$sth = $bdd->prepare($sql);
-$sth->execute();
-$classes = $sth->fetchAll();
+    // Récupérer les classes
+    $sql = "SELECT * FROM classes";
+    $sth = $bdd->prepare($sql);
+    $sth->execute();
+    $classes = $sth->fetchAll();
 
-// Récupérer les races
-$sql = "SELECT * FROM races";
-$sth = $bdd->prepare($sql);
-$sth->execute();
-$races = $sth->fetchAll();
+    // Récupérer les races
+    $sql = "SELECT * FROM races";
+    $sth = $bdd->prepare($sql);
+    $sth->execute();
+    $races = $sth->fetchAll();
 
 
 if (isset($_POST["createNewPerso"])) {

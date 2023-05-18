@@ -131,8 +131,9 @@
         }
     }
 
-    // Sauvegarde de l'état de votre personnage
     require_once('_level_up.php');
+
+    // Sauvegarde de l'état de votre personnage
     $bdd = connect();
     $sql = "UPDATE persos SET `gold` = :gold, `pv` = :pv, `level` = :level, `xp` = :xp WHERE id = :id AND user_id = :user_id;";    
     $sth = $bdd->prepare($sql);
@@ -148,13 +149,6 @@
     
 
     // dd($_SESSION);
-
-    if ($_SESSION['perso']['pv'] <= 0) {
-        unset($_SESSION['perso']);
-        unset($_SESSION['fight']);
-        header('Location: persos.php');
-    }
-
     require_once('_header.php');
     ?>
 
@@ -213,6 +207,7 @@
             if ($_SESSION['perso']['pv'] <= 0) {
                 unset($_SESSION['perso']);
                 unset($_SESSION['fight']);
+                header('Location: game_over.php');
             }
         ?>
         </body>
