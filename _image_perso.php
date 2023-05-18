@@ -170,6 +170,6 @@
 
 
     // Afficher l'image
-    echo '<img src="img/' . $image . '" alt="Image du personnage" class = "perso2-img">';
+    echo '<img src="img/' . $image . '" alt="Image du personnage" class = "perso2-img ">';
             
 ?>
