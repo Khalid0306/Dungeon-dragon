@@ -11,7 +11,7 @@ class Sabre extends Equipement {
         $this->classe_requises = ["Warrior", "Thief"];
         $this->stat_requises = ["pwr" => 10];
         $this->Bonus_stat = ["pwr" => 5, "vit" => 3];
-        $this->prix_eqp = 28;
+        $this->prix_eqp = 98;
         $this->picture = 'img/Sabre.png';
         $this->equiper = false;
         $this->quantité = 1;

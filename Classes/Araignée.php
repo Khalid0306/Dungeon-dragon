@@ -18,8 +18,30 @@ class Araignée extends Ennemi
     }
 
 
-    public function runaway()
+    public function dialogSpider()
     {
+        $randomNum = random_int(1, 10);
 
+        if ($randomNum <= 4) {
+            echo "Hsbnvd jhbdnjvbd hvsn! (Caught in my web of doom!)";
+        } else if ($randomNum <= 6) {
+            echo "Kjbsnvds dksvn jnvbsd! (Struggle all you want, you are trapped!)";
+        } else if ($randomNum <= 8) {
+            echo "Vbsjhdn jdvbn jndsjv! (Savor the venom coursing through your veins!)";
+        } else {
+            echo "Jnvdnjksn jnhsbvd, dnjvhsb! (You will make a delightful feast!)";
+        }
+    }
+
+    public function run_away(){
+
+        $flee = random_int(1, 10);
+    
+        if ($flee <= 5) {
+            echo "The Goblin successfully flees from the battle!";
+            unset($_SESSION['fight']['ennemi']);
+        } else {
+            echo "The Goblin fails to escape and remains in the battle!";
+        }
     }
 }

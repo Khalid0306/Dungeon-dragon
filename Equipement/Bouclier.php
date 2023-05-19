@@ -11,8 +11,8 @@ class Bouclier extends Equipement {
         $this->classe_requises = ["Warrior", "Tank"];
         $this->stat_requises = ["def" => 10];
         $this->Bonus_stat = ["def" => 5];
-        $this->prix_eqp = 26;
-        $this->picture = 'img/Bouclier.png';
+        $this->prix_eqp = 86;
+        $this->picture = 'img/bouclier.png';
         $this->equiper = false;
         $this->quantité = 1;
     }

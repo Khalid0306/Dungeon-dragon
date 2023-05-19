@@ -5,7 +5,7 @@
     }
 
     if (!isset($_GET['id'])) {
-        header('Location: persos.php?msg=id non passé !');
+        header('Location: persos.php?msg=id not passed !');
     }
 
     $bdd = connect();
@@ -19,6 +19,6 @@
         'user_id'   => $_SESSION['user']['id']
     ]);
 
-    header('Location: persos.php?msg=perso bien supprimé !');
+    header('Location: persos.php?msg=Your character has been successfully deleted !');
 ?>
 

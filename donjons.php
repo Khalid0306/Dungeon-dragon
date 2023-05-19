@@ -34,11 +34,11 @@
         class="container"
         style="background-color: rgba(255,255,255, 0.2)"
     >
-        <?php echo $_SESSION['perso']['name']; ?> (<a href="persos.php">Changer</a>)
+      <h3> <b><?php echo $_SESSION['perso']['name']; ?> (<a href="persos.php" class="btn btn-red">Change</a>)</b></h3>
         <ul>
             <?php foreach($donjons as $donjon) { ?>
                 <li><a href="donjons_play.php?id=<?php echo $donjon['id']; ?>">
-                    <?php echo $donjon['name']; ?>
+                    <?php echo $donjon['name'];?>
                 </a></li>
             <?php } ?>
         </ul>

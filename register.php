@@ -18,27 +18,27 @@
 <?php require_once('_header.php'); ?>
 <div class="container">
 <form action="" method="post">
-        <h1>Création de votre compte</h1>
+        <h1>Create your account</h1>
         <div>
-            <label for="email">Email</label>
+            <label for="email">Email : </label>
             <input 
                 type="email" 
-                placeholder="Entrez votre email" 
+                placeholder="Enter your email" 
                 name="email" 
                 id="email" 
             />
         </div>
         <div>
-            <label for="password">Mot de passe</label>
+            <label for="password">Password : </label>
             <input 
                 type="password" 
-                placeholder="Entrez votre mot de passe" 
+                placeholder="Enter your password" 
                 name="password" 
                 id="password" 
             />
         </div>
         <div class="mt-4">
-            <input type="submit" name="send" value="Créer" class="btn btn-green" />
+            <input type="submit" name="send" value="Create" class="btn btn-green" />
         </div>
     </form>
 </div>

@@ -11,7 +11,7 @@ class Dague extends Equipement {
         $this->classe_requises = ["Thief", "Archer"];
         $this->stat_requises = ["pwr" => 7, "vit" => 10];
         $this->Bonus_stat = ["vit" => 5, "dex" => 3];
-        $this->prix_eqp = 24;
+        $this->prix_eqp = 74;
         $this->picture = 'img/Dague.png';
         $this->equiper = false;
         $this->quantité = 1;

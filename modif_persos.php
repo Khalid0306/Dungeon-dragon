@@ -6,7 +6,7 @@
     }
 
     if (!isset($_GET['id'])) {
-        header('Location: persos.php?msg=id non passé !');
+        header('Location: persos.php?msg=id not passed !');
     }
 
     $bdd = connect();
@@ -33,19 +33,19 @@
 ?>
 <?php require_once('_header.php'); ?>
 <div class="container">
-<h1>Modifications : </h1>
+<h1>Modification : </h1>
 <form action="" method="POST">
     <div>
         <!-- <b>Nom actuelle : </b><?php echo $perso['name'];?>-->
         <label for="name">name :</label>
-        <input type="name" placeholder="Entrez le nom de votre personnage" name="name" id="name" />
+        <input type="name" placeholder="Enter your character's name" name="name" id="name" />
     </div>
     <div>
-        <input type="submit" class="btn btn-grey" name="send" value="modifier" />
+        <input type="submit" class="btn btn-grey" name="send" value="Edit" />
     </div>
     </form>
 <div>
-    <a href="persos.php" class="btn btn-red">Retour</a>
+    <a href="persos.php" class="btn btn-red">Return</a>
  </div>
 </div>
 

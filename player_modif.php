@@ -26,9 +26,9 @@
                     'user_id'   => $_SESSION['user']['id'],
                     'password'  => password_hash($_POST['password'], PASSWORD_DEFAULT)
                 ]);
-                $msg = "Le mot de passe a été modifié avec succès.";
+                $msg = "The password has been changed successfully.";
             } else {
-                $msg = "L'ancien mot de passe est incorrect.";
+                $msg = "The old password is incorrect.";
             }
         } 
     }
@@ -54,7 +54,7 @@
     <label for="old_password">Old password : </label>
     <input 
         type="password" 
-        placeholder="Entrez votre ancien mot de passe" 
+        placeholder="Enter your old password" 
         name="old_password" 
         id="old_password" 
         oninput="checkOldPassword()"
@@ -62,15 +62,15 @@
     </div>
     <div>
         <label for="password">New password :</label>
-        <input type="password" placeholder="Entrez votre nouveau mot de passe " name="password" id="password" disabled/>
+        <input type="password" placeholder="Enter your new password " name="password" id="password" disabled/>
     </div>
     <div>
-        <input type="submit" name="send" value="modifier" class="btn btn-green" />
+        <input type="submit" name="send" value="edit" class="btn btn-green" />
     </div>
     </form>
     <?php if (!empty($msg)) { echo "<div>" . $msg . "</div>"; } ?>
 <div>
-    <a href="player_show.php" class="btn btn-red">Retour</a>
+    <a href="player_show.php" class="btn btn-red">Returns</a>
  </div>
 
 </div>

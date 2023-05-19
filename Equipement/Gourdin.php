@@ -11,7 +11,7 @@ class Gourdin extends Equipement {
         $this->classe_requises = ["Warrior", "Tank"];
         $this->stat_requises = ["pwr" => 8];
         $this->Bonus_stat = ["pwr" => 3, "def" => 3];
-        $this->prix_eqp = 23;
+        $this->prix_eqp = 73;
         $this->picture = 'img/Gourdin.png';
         $this->equiper = false;
         $this->quantité = 1;

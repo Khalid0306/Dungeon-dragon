@@ -149,7 +149,7 @@ if (isset($_POST["createNewPerso"])) {
 
 <body>
     <h1>
-        <center><b>Creez votre personnage</b></center>
+        <center><b>Create your character</b></center>
     </h1>
     <form action="" method="POST">
         <div>
@@ -198,8 +198,8 @@ if (isset($_POST["createNewPerso"])) {
         </div>
 
         <div class="mt-4">
-            <input type="submit" class="btn btn-green" name="createNewPerso" value="Créer" />
-            <a class="btn btn-red" href="persos.php">Retour</a>
+            <input type="submit" class="btn btn-green" name="createNewPerso" value="Create" />
+            <a class="btn btn-red" href="persos.php">Return</a>
         </div>
     </form>
 

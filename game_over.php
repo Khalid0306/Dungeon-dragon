@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="Style/nav.css">
 </head>
     <div>
-        <a href="persos.php" class="button-bottom-center btn btn-red">Retour</a>
+        <a href="persos.php" class="button-bottom-center btn btn-red">Return</a>
     </div>
    
 

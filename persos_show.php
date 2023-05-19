@@ -45,13 +45,13 @@
 <div class="">
      <!-- <?php //require_once('_perso_show_image.php'); ?> -->
     </div>
-<h1>Détail du personnage</h1>
+<h1>Character detail</h1>
 <div class="mt-2" >
-     <b>Nom:</b> <?php echo $perso['name']; ?>
+     <b>Name:</b> <?php echo $perso['name']; ?>
      </div>
      
      <div class="mt-2">
-        <b>Point de vie:</b> <?php echo $perso['pv']; ?>
+        <b>Life point:</b> <?php echo $perso['pv']; ?>
     </div>
 
     <div class="mt-2">
@@ -71,11 +71,11 @@
     </div>
 
     <div class="mt-2">
-        <b>Point de compétence :</b> <?php echo $perso['pts de competence']; ?>
+        <b>Skill point :</b> <?php echo $perso['pts de competence']; ?>
     </div>
 
 <div class="mt-2" >
-     <b>Affinité:</b> <?php echo $perso['aff']; ?>
+     <b>Affinity:</b> <?php echo $perso['aff']; ?>
      </div>
 
 <div class="mt-2">
@@ -83,11 +83,11 @@
     </div>
 
  <div class="mt-2">
-        <b>Force:</b> <?php echo $perso['pwr']; ?>
+        <b>Power:</b> <?php echo $perso['pwr']; ?>
     </div>
 
     <div class="mt-2">
-        <b>Dextérité:</b> <?php echo $perso['dex']; ?>
+        <b>Dexterity:</b> <?php echo $perso['dex']; ?>
     </div>
 
     <div class="mt-2">
@@ -99,21 +99,21 @@
     </div>
 
     <div class="mt-2">
-        <b>Vitesse:</b> <?php echo $perso['vit']; ?>
+        <b>Speed</b> <?php echo $perso['vit']; ?>
     </div>
 
     <div class="vl"></div>
 
     <div class="vl_text">
     
-    <h1>Attribuez vos points CP: </h1>
+    <h1>Allocate your CP points:</h1>
 
         <div class="mt-4">
-            <b>Point de compétence :</b> <?php echo $perso['pts de competence']; ?>
+            <b>Skill Point:</b> <?php echo $perso['pts de competence']; ?>
         </div>
 
         <div class="mt-4">
-            <b>Point de vie:</b> <?php echo $perso['pv']; ?>
+            <b>Life point:</b> <?php echo $perso['pv']; ?>
             <div >
                 <form action="_increase_stats.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
@@ -124,7 +124,7 @@
         </div>
 
         <div class="mt-2">
-            <b>Force:</b> <?php echo $perso['pwr']; ?>
+            <b>Power:</b> <?php echo $perso['pwr']; ?>
             <div >
                 <form action="_increase_stats.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
@@ -135,7 +135,7 @@
         </div>
 
         <div class="mt-2">
-            <b>Dextérité:</b> <?php echo $perso['dex']; ?>
+            <b>Dexterity:</b> <?php echo $perso['dex']; ?>
             <div >
                 <form action="_increase_stats.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
@@ -168,7 +168,7 @@
         </div>
 
         <div class="mt-2">
-            <b>Vitesse:</b> <?php echo $perso['vit']; ?>
+            <b>Speed:</b> <?php echo $perso['vit']; ?>
             <div >
                 <form action="_increase_stats.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $perso['id']; ?>">
@@ -181,7 +181,7 @@
     </div> 
 
  <div class="mt-2">
-    <a href="persos.php" class="btn btn-red">Retour</a>
+    <a href="persos.php" class="btn btn-red">Return</a>
  </div>
 </div>
 

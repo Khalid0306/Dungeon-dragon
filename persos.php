@@ -26,7 +26,7 @@
 <?php require_once('_header.php'); ?>
     <h1><?php echo $_SESSION['user']['email']; ?></h1>
     <div class="container">
-    <h2><a>Vos personnages :</a></h2>
+    <h2><a>Your champions :</a></h2>
 
 
     
@@ -38,19 +38,19 @@
         <thead>
             <tr>
             <th width="1%">ID</th>
-                <th>Nom</th>
+                <th>Name</th>
                 <th>Lvl</th>
                 <th>Class</th>
                 <th>Race</th>
                 <th>Xp</th>
                 <th>PV</th>
-                <th>Force</th>
-                <th>Dextérité</th>
-                <th>Defence</th>
+                <th>Power</th>
+                <th>Dexterity</th>
+                <th>Defense</th>
                 <th>Mana</th>
-                <th>Affinité</th>
-                <th>Vitesse</th>
-                <th>Or</th>
+                <th>Affinity</th>
+                <th>Speed</th>
+                <th>Gold</th>
                 <th width="30%">Action</th>
             </tr>
         </thead>
@@ -76,27 +76,27 @@
                             <a 
                                 class="btn btn-green"
                                 href="persos_choice.php?id=<?php echo $perso['id']; ?>" 
-                            >Choisir</a>
+                            >Choose</a>
                         <?php } else { ?>
                             <a 
                                 class="btn btn-green"
                                 href="persos_respawn.php?id=<?php echo $perso['id']; ?>" 
-                            >Résussité</a>
+                            >Resurrect</a>
                         <?php } ?>
 
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
-                           >Détail</a>
+                           >Details</a>
                         <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"
-                           >Modifier</a>
+                           >Edit</a>
                         <a  href="persos_del.php?id=<?php echo $perso['id'];?> " class="btn btn-red"
-                           onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Supprimer</a>
+                           onClick="return confirm('Voulez-vous vraiment le supprimer ?')">Delete</a>
                     </td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
     <div class="mt-4">
-    <a href="perso_add.php" class="btn btn-blue"> Creer votre personnage</a>
+    <a href="perso_add.php" class="btn btn-blue">Create your character</a>
     </div>
     </div>
 </body>

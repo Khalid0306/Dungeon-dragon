@@ -108,6 +108,16 @@ h1 {
     float: right;
     margin-right: 15%; 
 }
+
+.marchand-img {
+    width: 30%; 
+    float: right;
+    margin-right: 10%; 
+}
+.eqipement-img {
+    width: 15%; 
+    margin-right: 10%; 
+}
 .w-60 {
     width: 80%;
 }
@@ -155,3 +165,210 @@ h1 {
     bottom: 250px;
     transform: translate(-50%, -50%);
 }
+
+
+.background-video-container {
+    position: relative;
+    height: calc(100vh - 40px); /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  #myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+.lettre-medievale {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    color: white;
+    padding: 5px;
+    margin: 20px;
+    position: absolute;
+    top: 5px; /* Adjust the top position as needed */
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 400px; /* Adjust the width as per your preference */
+  }
+  
+  .lettre-titre-moyen {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .lettre-contenu {
+    text-align: justify;
+    width: 100%;
+    font-size: 16px; /* Adjust the font size as desired */
+  }
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttons {
+    position: relative;
+    padding: 16px 30px;
+    font-size: 1.5rem;
+    color: var(--color);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  .buttons:hover {
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px var(--color);
+  }
+  
+  .buttons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s;
+  }
+  
+  .buttons:hover::before {
+    transform: scale(1);
+    transition-delay: 0.5s;
+    box-shadow: 0 0 10px var(--color),
+      0 0 30px var(--color),
+      0 0 60px var(--color);
+  }
+  
+  .buttons span {
+    position: absolute;
+    background: var(--color);
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--color),
+      0 0 20px var(--color),
+      0 0 30px var(--color),
+      0 0 50px var(--color),
+      0 0 100px var(--color);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
+  }
+  
+  .buttons:hover span {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+  
+  .buttons span:nth-child(1),
+  .buttons span:nth-child(3) {
+    width: 40px;
+    height: 4px;
+  }
+  
+  .buttons:hover span:nth-child(1),
+  .buttons:hover span:nth-child(3) {
+    transform: translateX(0);
+  }
+  
+  .buttons span:nth-child(2),
+  .buttons span:nth-child(4) {
+    width: 4px;
+    height: 40px;
+  }
+  
+  .buttons:hover span:nth-child(1),
+  .buttons:hover span:nth-child(3) {
+    transform: translateY(0);
+  }
+  
+  .buttons span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -50px;
+    transform-origin: left;
+  }
+  
+  .buttons:hover span:nth-child(1) {
+    left: 50%;
+  }
+  
+  .buttons span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -50px;
+    transform-origin: right;
+  }
+  
+  .buttons:hover span:nth-child(3) {
+    right: 50%;
+  }
+  
+  .buttons span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -50px;
+    transform-origin: top;
+  }
+  
+  .buttons:hover span:nth-child(2) {
+    top: 50%;
+  }
+  
+  .buttons span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -50px;
+    transform-origin: bottom;
+  }
+  
+  .buttons:hover span:nth-child(4 ) {
+    bottom: 50%;
+  }
+
+  .buttons-center-left {
+    position: fixed;
+    top: 50%;
+    left: 500px;
+    transform: translate(-50%, -50%);
+  }
+
+  .dialog-bubble {
+    position: relative;
+    display: inline-block;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .dialog-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #f7f7f7 transparent transparent transparent;
+  }
