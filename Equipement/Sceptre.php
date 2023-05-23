@@ -12,7 +12,7 @@ class Sceptre extends Equipement {
         $this->picture = 'img/Sceptre.webp';
         $this->equiper = false;
         $this->quantité = 1;
-        $this->id_eqp = 2;
+        $this->id_eqp = 1;
     }
 }
 
