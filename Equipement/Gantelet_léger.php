@@ -15,8 +15,7 @@ class Gantelet_leger extends Equipement {
         $this->prix_eqp = 82;
         $this->picture = 'img/gantelet_leger.png';
         $this->equiper = false;
-        $this->quantité = 1;
-        $this->id_eqp = 7;
+        $this->quantité = 8;
     }
 }
 

@@ -14,7 +14,7 @@ class Arc extends Equipement {
         $this->prix_eqp = 71;
         $this->picture = 'img/Arc.png';
         $this->equiper = false;
-        $this->quantité = 1;
+        $this->quantité = 19;
     }
 
 }

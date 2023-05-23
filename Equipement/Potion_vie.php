@@ -15,7 +15,7 @@ class Potion_de_vie extends Equipement {
         $this->picture = 'img/Potion_de_vie.png';
         $this->equiper = false;
         $this->quantité = 1;
-        $this->id_eqp = 1;
+        $this->id_eqp = 4;
     }
 }
 
