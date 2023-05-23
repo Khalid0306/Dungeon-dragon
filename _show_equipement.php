@@ -26,4 +26,12 @@
 <div>
     <b>Price :</b><?php echo $equipement->prix_eqp; ?>
 </div>
-br
+<div>
+    
+    <?php require_once('Buy_gear.php'); ?>
+    <form action="Buy_gear.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo $persoId; ?>">
+        <input type="submit" value="Buy" name="Buy" class="btn btn-green" onClick="return confirm('Confirmez vous votre choix ?')">
+    </form>
+</div>
+<br>

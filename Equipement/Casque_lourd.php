@@ -15,6 +15,8 @@ class Casque_lourd extends Equipement {
         $this->picture = 'img/casque_lourd.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 12;
+        
     }
 }
 

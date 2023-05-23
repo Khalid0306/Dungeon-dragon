@@ -16,6 +16,7 @@ class Toge extends Equipement {
         $this->picture = 'img/Toge.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 1;
     }
 }
 ?>

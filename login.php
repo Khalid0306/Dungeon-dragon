@@ -25,7 +25,7 @@
 ?>
 <?php require_once('_header.php'); ?>
     <form action="" method="post">
-        <h1>Connexion</h1>
+        <h1>Welcome back !</h1>
 
         <?php if (isset($msg)) { echo "<div>" . $msg . "</div>"; } ?>
 

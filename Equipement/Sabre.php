@@ -15,6 +15,7 @@ class Sabre extends Equipement {
         $this->picture = 'img/Sabre.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 3;
     }
 }
 

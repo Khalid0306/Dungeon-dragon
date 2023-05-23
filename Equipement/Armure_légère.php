@@ -15,6 +15,7 @@ class Armure_légère extends Equipement {
         $this->picture = 'img/armure_légère.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 18;
     }
 
 }

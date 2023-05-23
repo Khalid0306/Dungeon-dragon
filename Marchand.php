@@ -1,13 +1,15 @@
 <?php
     require_once('functions.php');
+ 
     
     if (!isset($_SESSION['user'])) {
         header('Location: login.php');
     }
 
-    if (!isset($_SESSION['perso'])) {
-        header('Location: persos.php');
+    if (!isset($_GET['id'])) {
+        header('Location: persos.php?msg=id non passé !');
     }
+
 
     require_once('_header.php');
     require_once('./Equipement/Armure_légère.php');
@@ -29,10 +31,29 @@
     require_once('./Equipement/Sabre.php');
     require_once('./Equipement/Sceptre.php');
     require_once('./Equipement/Toge.php');
+    require_once('./Equipement/Arc.php');
 ?>
+<div class="container marchand-img">
+<div class="dialog-bubble">
+    <?php 
+        $marchand_nb = random_int(1,10);
+
+        if ($marchand_nb <= 4) {
+            echo "Greetings, brave wanderer! Have you come in search of rare artifacts?";
+        } else if ($marchand_nb<= 6) {
+            echo "Ah, a keen eye for quality I see! My wares won't disappoint!";
+        } else if ($marchand_nb <= 8) {
+            echo "Look closely, adventurer, treasures are hidden among the mundane.";
+        } else {
+            echo "Farewell! May fortune favor you, and my goods serve you well!";
+        }
+    ?>    
+    </div>
+    <img class="" src="img/image marchand.png" alt="image marchand">
+ </div>
 <div class="container"> 
     <h1>The Enchanted store</h1>
-    <div class="px-4">
+    <div class="">
     <?php 
         $nb = random_int(0,10); 
             
@@ -62,32 +83,16 @@
                 $equipements[] = new Gantelet_lourd();
                 $equipements[] = new Botte_lourde ();
                 $equipements[] = new Cuirasse_lourde ();
+                $equipements[] = new Arc ();
             } 
      
-        
+            $persoId = $_GET['id'];
             foreach ($equipements as $equipement) {
                 include '_show_equipement.php';
             }
     ?>
     </div>
 </div>
-<div class="container marchand-img">
-<div class="dialog-bubble">
-    <?php 
-        $marchand_nb = random_int(1,10);
 
-        if ($marchand_nb <= 4) {
-            echo "Greetings, brave wanderer! Have you come in search of rare artifacts?";
-        } else if ($marchand_nb<= 6) {
-            echo "Ah, a keen eye for quality I see! My wares won't disappoint!";
-        } else if ($marchand_nb <= 8) {
-            echo "Look closely, adventurer, treasures are hidden among the mundane.";
-        } else {
-            echo "Farewell! May fortune favor you, and my goods serve you well!";
-        }
-    ?>    
-    </div>
-    <img class="" src="img/image marchand.png" alt="image marchand">
- </div>
 
  

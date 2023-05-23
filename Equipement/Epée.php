@@ -16,6 +16,7 @@ class Epée extends Equipement {
         $this->picture = 'img/Epée.webp';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 8;
     }
 }
 ?>

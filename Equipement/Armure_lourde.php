@@ -14,7 +14,8 @@ class Armure_lourde extends Equipement {
         $this->prix_eqp = 109;
         $this->picture = 'img/armure_lourde.png';
         $this->equiper = false;
-        $this->quantité = 1;
+        $this->id_eqp = 17;
+        
     }
 }
 

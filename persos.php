@@ -83,7 +83,8 @@
                                 href="persos_respawn.php?id=<?php echo $perso['id']; ?>" 
                             >Resurrect</a>
                         <?php } ?>
-
+                    <a href="Marchand.php?id=<?php echo $perso['id']; ?>" class="btn btn-blue"
+                           >Marchand</a>
                     <a href="persos_show.php?id=<?php echo $perso['id']; ?>" class="btn btn-grey"
                            >Details</a>
                         <a href="modif_persos.php? id=<?php echo $perso['id'];?>" class="btn btn-blue"

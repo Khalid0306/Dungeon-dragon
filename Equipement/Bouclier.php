@@ -14,7 +14,7 @@ class Bouclier extends Equipement {
         $this->prix_eqp = 86;
         $this->picture = 'img/bouclier.png';
         $this->equiper = false;
-        $this->quantité = 1;
+        $this->id_eqp = 14;
     }
 }
 

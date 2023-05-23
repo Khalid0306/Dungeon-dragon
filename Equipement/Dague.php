@@ -15,6 +15,7 @@ class Dague extends Equipement {
         $this->picture = 'img/Dague.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 9;
     }
 }
 

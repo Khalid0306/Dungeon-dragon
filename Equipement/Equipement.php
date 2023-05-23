@@ -13,7 +13,7 @@ class Equipement
     public string $picture;
     public bool $equiper;
     public int $quantité; 
-
+    public int $id_eqp;
 
 }
 

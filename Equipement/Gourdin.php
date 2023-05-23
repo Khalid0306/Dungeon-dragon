@@ -15,6 +15,7 @@ class Gourdin extends Equipement {
         $this->picture = 'img/Gourdin.png';
         $this->equiper = false;
         $this->quantité = 1;
+        $this->id_eqp = 6;
     }
 }
 ?>
